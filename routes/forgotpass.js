@@ -41,7 +41,7 @@ const sendTokenLink = (email) => {
 		{expiresIn: '1h'},
 		(err, emailToken) => {
 			if (err) throw err;
-			const url = `http://localhost:3000/forgot/reset/${emailToken}`;
+			const url = `https://inshare-production.up.railway.app/forgot/reset/${emailToken}`;
 
 			transporter.sendMail({
 				to: email,

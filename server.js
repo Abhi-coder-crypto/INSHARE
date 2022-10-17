@@ -7,6 +7,7 @@ const cors = require('cors');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const {SERVER} = require("./config/index");
 
 // Assign the LocalStrategy configuration
 require('./config/passport')(passport);

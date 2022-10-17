@@ -30,7 +30,8 @@ const sendVerificationLink = (newUser) => {
 		{expiresIn: '1d'},
 		(err, emailToken) => {
 			if (err) throw err;
-			const url = `http://localhost:3000/confirmation/${emailToken}`;
+			
+			const url = `https://inshare-production.up.railway.app/confirmation/${emailToken}`;
 
 			transporter.sendMail({
 				to: newUser.email,
